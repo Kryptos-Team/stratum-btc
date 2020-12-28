@@ -1,0 +1,16 @@
+Developement Status :: 2 - Pre-Alpha
+Environment :: Console
+Environment :: No Input/Output (Daemon)
+Framework :: Pytest
+Intended Audience :: Developers
+Intended Audience :: Education
+Intended Audience :: Financial and Insurance Industry
+Intended Audience :: Information Technology
+License :: OSI Approved :: MIT License
+Natural Language :: English
+Operating System :: Unix
+Programming Language :: Python :: 3.7
+Programming Language :: Python :: 3.8
+Programming Language :: Python :: 3.9
+Topic :: Education
+Topic :: Utilities

@@ -1,0 +1,7 @@
+stratum
+mining
+kryptos
+btc
+ltc
+bitcoin
+litecoin
