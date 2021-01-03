@@ -1,5 +1,5 @@
 import re
-from src.exceptions import VersionError
+from btc.exceptions import VersionError
 from itertools import zip_longest
 
 _regex = re.compile("^"

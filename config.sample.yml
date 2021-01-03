@@ -1,0 +1,57 @@
+server:
+    # Enable debug for verbose logging
+    debug: true
+
+    # Various log options
+    log:
+        # Possible values: DEBUG, WARNING, INFO, ERROR, CRITICAL
+        level: DEBUG
+    # Threads to use for synchronous methods
+    thread_pool_size: 1
+
+    # RPC configuration
+    rpc:
+        # RPC throws TimeoutServiceException once total time since
+        # request has been placed (time to delivery to client + time
+        # for processing on the client) crosses _TOTAL (in second).
+        # _TOTAL reflects the fact that not all transports deliver
+        # RPC requests to the clients instantly, so request can
+        # wait some time in the buffer on the server side.
+        timeout_total: 30
+
+        # RPC call throws TimeoutServiceException once client is
+        # processing request longer than _PROCESS (in second)
+        timeout_process: 30
+
+    transport:
+        # Hostname or external IP to expose
+        hostname: stratum.kryptos.com
+
+        # Port used for socket transport
+        listen_socket_port: 3333
+
+        # Port used for HTTP poll transport
+        listen_http_port: 8000
+
+        # Port used for HTTPS poll transport
+        listen_https_port: 8443
+
+        # Port used for websocket transport
+        listen_ws_port: 9000
+
+        # Port used for secure websocket transport
+        listen_wss_port: 9443
+    ssl:
+        private_key: BASE64_ENCODED_STRING
+        certificate: BASE64_ENCODED_STRING
+        ca_certificate: BASE64_ENCODED_STRING
+    http:
+        # Keepalive for HTTP transport sessions
+        session_timeout: 30
+
+        # Maximum number of messages waiting to deliver to HTTP poll clients
+        # Buffer length is per connection.
+        buffer_limit: 1000
+
+        # User agent used in HTTP requests
+        user_agent: Kryptos/Stratum

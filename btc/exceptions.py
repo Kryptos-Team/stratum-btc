@@ -9,3 +9,8 @@ class StratumBaseException(Exception):
 class VersionError(StratumBaseException):
     def __init__(self, message):
         super(VersionError, self).__init__(message)
+
+
+class SubmitException(StratumBaseException):
+    def __init__(self, message):
+        super(SubmitException, self).__init__(message)
